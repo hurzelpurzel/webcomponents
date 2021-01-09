@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       
+        <script src="strichliste/strichliste.js" \></script>
+        
+     
+    </head>
+    <body>
+        <h1>
+            Demopage for WebComponentens
+        </h1>
+        <hr/>
+        <h2>Strichliste </h2>
+        <p>
+        <strich-liste id="sl" value="2"></strich-liste>
+        <input id="wert" type="number" value="2"/>
+        </p>
+        <hr/>
+        <script >
+            
+            document.getElementById("wert").addEventListener('change',(event) => {
+                
+                var wert = event.target.value;
+                var c = document.getElementById("sl");
+                c.setAttribute("value", wert);
+            });
+            
+
+        </script>
+        </body>
+</html>
